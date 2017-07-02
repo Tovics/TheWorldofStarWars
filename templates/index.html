@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Star Wars universe</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+    <script src="{{url_for('static', filename='script.js')}}" defer></script>
+    <link rel="icon" 
+      type="image/png" 
+      href="http://vignette2.wikia.nocookie.net/firststrikemod/images/f/f2/Rebelsymbol.png/revision/latest?cb=20071031231453">
+  </head>
+  <body>
+    <h1>Star Wars universe planets</h1>
+    <div id="controll-buttons">
+      <input class="btn btn-info" type="button" id="previous" value="previous" data-link="" />
+      <input class="btn btn-primary" type="button" id="next" value="next" data-link="" />
+    </div>
+    <table id="planet_data">
+        <tr>
+            <th>Name</th>
+            <th>Diameter</th>
+            <th>Climate</th>
+            <th id="terrain">Terrain</th>
+            <th id="Swater_precentage">Surface Water Percentage</th>
+            <th>Population</th>
+            <th>Residents</th>
+        </tr>
+    </table>
+
+    <div id="residents-modal" class="modal fade">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title">Residents</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <table id="residents_modulo">
+            <tr class="modal-body">
+              <th>Name</th>
+              <th>Height (in meters)</th>
+              <th>Mass (in kg)</th>
+              <th>Skin color</th>
+              <th>Hair color</th>
+              <th>Eye color</th>
+              <th>Birth year</th>
+              <th>Gender</th>
+            </tr>  
+          </table>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

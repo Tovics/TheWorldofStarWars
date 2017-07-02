@@ -1,0 +1,34 @@
+table, th, td {
+    border: 1pt solid grey;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    vertical-align: center;
+}
+
+#Swater_precentage {
+    width: 15%;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 5px;
+    width: 80%;
+    margin: 10px;
+}
+
+h1 {
+    color: rgb(101, 87, 87);
+}
+
+#controll-buttons .btn {
+    display: none;
+}
+
+.modal-body {
+    border: 1pt solid rgba(160, 156, 173, 0.43);;
+    padding: 5px;
+    text-align: left;
+}
