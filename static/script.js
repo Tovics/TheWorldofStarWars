@@ -18,7 +18,7 @@ function defineResidentsButtonsListeners() {
     });
 }
 
-function loadPlanets(url = 'https://swapi.co/api/planets') {
+function loadPlanets(url = '//swapi.co/api/planets') {
     
     $.ajax({
         dataType: "json",
@@ -39,7 +39,7 @@ function loadPlanets(url = 'https://swapi.co/api/planets') {
                 population = 'unknown';
                 if (planetData.population !== 'unknown') {
                     var populationInt = parseInt(planetData.population);
-                    population = populationInt.toLocaleString() + ' people';
+                    population = populationInt.toLocaleString() + 'people';
                 }
                 surfaceWater = 'unknown';
                 if (planetData.surface_water !== 'unknown') {
