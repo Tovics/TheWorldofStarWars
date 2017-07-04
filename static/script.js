@@ -14,11 +14,13 @@ function defineNavigationButtonsListeners() {
 
 function defineResidentsButtonsListeners() {
     $('#planet_data .resident').click(function() {
+        ////////////planetTable.find("tr:not(:first)").remove();
+        $(this).data("planet")
         $('#residents-modal').modal('show');
     });
 }
 
-function loadPlanets(url = '//swapi.co/api/planets') {
+function loadPlanets(url = 'https://swapi.co/api/planets') {
     
     $.ajax({
         dataType: "json",
@@ -60,7 +62,7 @@ function loadPlanets(url = '//swapi.co/api/planets') {
                     <td>${planetData.terrain}</td>
                     <td class="water">${surfaceWater}</td>
                     <td class="ppl">${population}</td>
-                    <td><input class="btn btn-primary resident" type="button" value=${planetResidents}></td>
+                    <td><input class="btn btn-primary resident" type="button" data-planet=${planetData.id} value=${planetResidents}></td>
                 </tr>`;
 
 
