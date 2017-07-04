@@ -21,6 +21,7 @@ function defineResidentsButtonsListeners() {
 function loadPlanets(url = "https://swapi.co/api/planets") {
   $.ajax({
     dataType: "json",
+    type: "POST",
     url: url,
     success: function(response) {
       var residentTable = $("#residents_modulo");
