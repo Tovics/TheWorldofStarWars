@@ -17,7 +17,9 @@ function defineResidentsButtonsListeners() {
     $("#residents-modal").modal("show");
   });
 }
-
+$.post("https://swapi.co/api/planets").done(function(data) {
+    console.log(data.result.residents)
+});
 function loadPlanets(url = "https://swapi.co/api/planets") {
   $.ajax({
     dataType: "json",
@@ -79,12 +81,12 @@ function loadPlanets(url = "https://swapi.co/api/planets") {
       }
       if (response.previous !== null) {
         setNavigationButtonLinks(
-          response.next.replace("http://", "https://"),
-          response.previous.replace("http://", "https://")
+          response.next.replace(/^http:\/\//g, 'https://'),
+          response.previous.replace(/^http:\/\//g, 'https://')
         );
       } else {
         setNavigationButtonLinks(
-          response.next.replace("http://", "https://"),
+          response.next.replace(/^http:\/\//g, 'https://'),
           response.previous
         );
       }
